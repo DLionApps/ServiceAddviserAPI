@@ -1,6 +1,8 @@
 import { Server } from "@hapi/hapi";
 import * as mongoose from "mongoose";
-import { UserController } from "./controllers/UserController";
+import { OwnerController } from "./controllers/OwnerController";
+import { VehicleController } from "./controllers/VehicleController";
+import { ServiceContoller } from "./controllers/ServiceContoller";
 var config = require("../src/config");
 
 export default class APIServer {
@@ -32,8 +34,14 @@ export default class APIServer {
       },
     });
 
-    const userController = new UserController();
-    this.server.route(userController.getRouteList());
+    const ownerController = new OwnerController();
+    this.server.route(ownerController.getRouteList());
+
+    const vehicleController = new VehicleController();
+    this.server.route(vehicleController.getRouteList());
+
+    const serviceContoller = new ServiceContoller();
+    this.server.route(serviceContoller.getRouteList());
 
     try {
       await this.server.start();

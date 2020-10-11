@@ -22,6 +22,7 @@
   "dependencies": {
     "@hapi/boom": "^9.1.0",
     "@hapi/hapi": "^20.0.1",
+    "@hapi/joi": "^17.1.1",
     "@types/hapi__hapi": "^20.0.1",
     "@types/mongoose": "^5.7.36",
     "mongoose": "^5.10.7"

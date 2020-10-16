@@ -72,6 +72,12 @@ export class OwnerController {
             return boom.notFound("Owner not found");
           }
         },
+        options: {
+          cors: {
+            origin: ["*"],
+            additionalHeaders: ["cache-control", "x-requested-with"],
+          },
+        },
       };
     };
 

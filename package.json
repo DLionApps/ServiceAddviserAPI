@@ -3,21 +3,22 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "engines": {
-    "node": ">=12"
-  },
-  "scripts": {
-    "build": "tsc && shx cp package.json dist",
-    "start": "npm run build && node dist",
-    "dev": "nodemon dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "author": "",
+  "license": "ISC",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DLionApps/ServiceAddviserAPI.git"
   },
-  "author": "",
-  "license": "ISC",
+  "engines": {
+    "node": "12.x.x"
+  },
+  "scripts": {
+    "build": "tsc && shx cp package.json dist",
+    "start": "npm run build && node dist",
+    "deploy": "gcloud app deploy",
+    "dev": "nodemon dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "bugs": {
     "url": "https://github.com/DLionApps/ServiceAddviserAPI/issues"
   },

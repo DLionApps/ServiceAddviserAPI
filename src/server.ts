@@ -3,7 +3,7 @@ import * as mongoose from "mongoose";
 import { OwnerController } from "./controllers/OwnerController";
 import { VehicleController } from "./controllers/VehicleController";
 import { ServiceContoller } from "./controllers/ServiceContoller";
-var config = require("../src/config");
+var config = require("./config");
 
 export default class APIServer {
   private server!: Server;

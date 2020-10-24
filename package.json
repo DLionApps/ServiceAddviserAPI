@@ -3,14 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": ">=12"
+  },
   "scripts": {
     "build": "tsc && shx cp package.json dist",
     "start": "npm run build && node dist",
     "dev": "nodemon dist",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "engines": {
-    "node": ">=12"
   },
   "repository": {
     "type": "git",
